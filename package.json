@@ -1,7 +1,7 @@
 {
   "name": "graphing-3d",
   "version": "0.1.0",
-  "homepage": "pavsel.github.io",
+  "homepage": "https://pavsel.github.io/3d-graphing",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
