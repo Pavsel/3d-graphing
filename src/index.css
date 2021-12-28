@@ -1,13 +1,150 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+section {
+    /*position: fixed;*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scene-container {
+    height: 100%;
+    /*pointer-events: none;*/
+}
+
+p{
+    font-weight: 300;
+    color: #232931;
+
+}
+.content-bar {
+    /*position: relative;*/
+
+    width: 100vw;
+    min-height: 300px;
+    bottom: 0;
+
+    color: black;
+
+    padding: 1em 0.5em 3em 0.5em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    z-index: 5;
+}
+
+.input-group {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: start;
+}
+
+.input-group h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    background-color: black;
+    border-left: 0.5em solid white;
+    border-right: 0.5em solid white;
+    /*margin-bottom: 10px;*/
+}
+
+button {
+    background: transparent;
+    border: 3px solid black;
+    height: 40px;
+    width: 60%;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button:focus {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+    outline: 0;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+button:active {
+    background: black;
+    color: white;
+}
+
+svg {
+    height: 70%;
+    fill: black;
+    transition: all 0.3s ease;
+}
+
+
+button:hover svg {
+    fill: white;
+}
+
+.preset-selector {
+    width: 60%;
+
+    padding: 10px 0 10px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.preset-name {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: black;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .content-bar{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .content-bar{
+        grid-template-columns: 1fr;
+    }
 }
